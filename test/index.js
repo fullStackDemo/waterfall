@@ -1,19 +1,39 @@
-import assert from 'assert';
+
+import * as assert from 'assert';
+import maskUSPhone from '../src/index';
+
+const testSamples = [
+  {
+    input: 'abc',
+    expectedResult: 'abc',
+    description: 'should return pristine value when receiving "abc"'
+  },
+  {
+    input: 'abc123456',
+    expectedResult: 'abc123456',
+    description: 'should return pristine value when receiving "abc123456"'
+  },
+  {
+    input: 'abcdefghi',
+    expectedResult: 'abcdefghi',
+    description: 'should return pristine value when receiving "abcdefghi"'
+  },
+  {
+    input: '1234567890',
+    expectedResult: '(123) 456-7890',
+    description: 'should return pristine value when receiving "(123) 456-7890"'
+  },
+];
 
 describe('Array', () => {
-  describe('#indexOf()', () => {
-    it('should return -1 when the value is not present', () => {
-      assert.equal([1, 2, 3].indexOf(5), -1);
+  testSamples.forEach(sample => {
+    it(sample.description, () => {
+      assert.equal(maskUSPhone(sample.input), sample.expectedResult);
     });
   });
 });
 
 
-describe('Object', () => {
-  describe('#keys()', () => {
-    it('should return a array of key', () => {
-      assert.deepEqual(Object.keys({ 'name': 'wz' }), ['name']);
-    });
-  })
-});
+
+
 
