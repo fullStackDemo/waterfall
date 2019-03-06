@@ -4,5 +4,4 @@ function sayHello(name) {
 
 const message = sayHello('alex');
 
-const pay = () => { }
 console.log(message);
