@@ -1,0 +1,24 @@
+{
+  "name": "waterfall",
+  "version": "1.0.0",
+  "description": "A NPM PACKAGE of VUE components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullStackDemo/waterfall.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "vue-components"
+  ],
+  "author": "alex wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullStackDemo/waterfall/issues"
+  },
+  "homepage": "https://github.com/fullStackDemo/waterfall#readme"
+}
