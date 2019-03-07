@@ -20,4 +20,4 @@ function maskUSPhone(phone) {
   return `(${codeArea}) ${prefix}-${sufix}`;
 }
 
-export default maskUSPhone;
+exports.maskUSPhone = maskUSPhone;

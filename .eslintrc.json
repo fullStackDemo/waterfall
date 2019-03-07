@@ -13,6 +13,6 @@
         "sourceType": "module"
     },
     "rules": {
-      "no-console": 0
+      "no-undef": "off"
     }
 }

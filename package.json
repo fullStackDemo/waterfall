@@ -1,12 +1,13 @@
 {
-  "name": "waterfall",
-  "version": "0.0.1",
+  "name": "vue-waterfall-pro",
+  "version": "0.0.6",
   "description": "A NPM PACKAGE of VUE components",
   "main": "index.js",
   "scripts": {
     "build": "npm run lint && babel ./src -d ./lib",
     "lint": "eslint ./src",
-    "test": "mocha --require babel-core/register"
+    "test": "nyc mocha --require babel-core/register",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,18 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-vue": "^5.2.2",
-    "mocha": "^6.0.2"
-  }
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {}
 }
